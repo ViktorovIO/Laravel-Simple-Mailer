@@ -35,6 +35,6 @@ class Feedback extends Mailable
                 'email'     =>  $this->email,
                 'msg'   =>  $this->msg,
             ])
-            ->subject('Про100торт.рф - Форма обратной связи');
+            ->subject('Feedback form');
     }
 }

@@ -15,20 +15,18 @@ class MailClass extends Mailable
     protected $phone;
     protected $address;
     protected $comment;
-    protected $cartItems;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($name, $phone, $address, $comment, $cartItems)
+    public function __construct($name, $phone, $address, $comment)
     {
         $this->name = $name;
         $this->phone = $phone;
         $this->address = $address;
         $this->comment = $comment;
-        $this->cartItems = $cartItems;
     }
 
     /**
@@ -44,8 +42,7 @@ class MailClass extends Mailable
                 'phone' => $this->phone,
                 'address' => $this->address,
                 'comment' => $this->comment,
-                'cartItems' => json_decode($this->cartItems),
             ])
-            ->subject('Про100торт.рф - Ваш заказ');
+            ->subject('Header');
     }
 }
